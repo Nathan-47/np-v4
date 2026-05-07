@@ -19,6 +19,9 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Nathan Parchment",
   description: "My personal website",
+  icons: {
+    icon: '/np_logo.png',
+  }
 };
 
 export default function RootLayout({
