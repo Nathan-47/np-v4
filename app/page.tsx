@@ -8,17 +8,18 @@ import { TbFileCv } from "react-icons/tb";
 export default function Home() {
   return (
     <div className="flex flex-col flex-1 items-center justify-center">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 sm:items-start">
-        <div className="grid grid-cols-1 gap-8 my-20">
+      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-0 px-6 sm:py-1 sm:px-16 sm:items-start">
+        <div className="grid grid-cols-1 gap-8 my-10 sm:my-20">
           <h1 className="font-bold text-xl">
             A Brummie that is passionate about building and creating digital
             magic using code.
           </h1>
 
           <p className="mt-6 leading-8 text-gray-300">
-            Currently a Web Developer @{" "}
+            Currently a Web Developer @ 
             <a
-              className="bg-yellow-400 text-gray-800 font-bold p-1 rounded-sm hover:bg-yellow-600 "
+              className="bg-white text-black ml-2 font-bold p-1 rounded-sm hover:bg-[#1d1d1d] hover:text-white hover:outline hover:outline-2 hover:outline-white hover:outline-offset-2 focus:outline-none focus:ring-3
+             focus:ring-[#f9c908]"
               href="https://www.bcusu.com/"
               target="_blank"
             >
@@ -36,7 +37,7 @@ export default function Home() {
 
           {/* history section */}
           <h2 className="uppercase">Experience</h2>
-          <div className="grid grid-cols-3 gap-4 text-gray-300">
+          <div className="grid sm:grid-cols-3 gap-4 text-gray-300">
             <div>2021 - PRESENT</div>
             <div className="col-span-2">
               <p>Web Developer | BCUSU</p>
@@ -72,7 +73,7 @@ export default function Home() {
 
           {/* contact section */}
           <h2 className="uppercase mt-12">Contact</h2>
-          <div className="grid grid-cols-3 gap-4">
+          <div className="grid sm:grid-cols-3 gap-4">
             <a
               href="mailto:nathan.parchment47@gmail.com"
               className="flex items-center justify-center gap-2 rounded-md border-1 border-white p-2 w-full sm: 1/2 hover:bg-white hover:text-black cursor-pointer duration-250 focus:outline-none focus:ring-3
