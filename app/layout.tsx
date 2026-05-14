@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Archivo_Black, Inter } from "next/font/google";
 import "./globals.css";
+import Navbar from "./components/navbar";
 
 // fonts
 const archivo = Archivo_Black({
@@ -34,6 +35,7 @@ export default function RootLayout({
       <body
         className={`${archivo.variable} ${inter.className} min-h-full flex flex-col`}
       >
+      <Navbar />
         {children}
       </body>
     </html>
