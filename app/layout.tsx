@@ -18,7 +18,7 @@ const inter = Inter({
 // fonts
 
 export const metadata: Metadata = {
-  title: "Nathan Parchment",
+  title: "Nathan Parchment | Home",
   description: "My personal website",
   icons: {
     icon: '/np_logo.png',
