@@ -24,7 +24,7 @@ export default function project() {
 
         {/* project grid section  */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 group">
-          <Link href="/fitrquest">
+          <Link href="/projects/fitrquest">
             <div className="project-card transition-opacity duration-300 group-hover:opacity-40 hover:!opacity-100">
               <Image
                 className="mb-8 w-full h-auto"
@@ -54,7 +54,7 @@ export default function project() {
             </div>
           </Link>
 
-          <Link href="/officerquiz">
+          <Link href="projects/officerquiz">
             <div className="project-card transition-opacity duration-300 group-hover:opacity-40 hover:!opacity-100">
               <Image
                 className="mb-8 !w-100 h-auto"
@@ -80,7 +80,7 @@ export default function project() {
             </div>
           </Link>
 
-          <Link href="/socquiz">
+          <Link href="projects/socquiz">
             <div className="project-card transition-opacity duration-300 group-hover:opacity-40 hover:!opacity-100">
               <Image
                 className="mb-8 !w-100 h-auto"
@@ -105,7 +105,7 @@ export default function project() {
             </div>
           </Link>
 
-          <Link href="/marvelapi">
+          <Link href="projects/marvelapi">
             <div className="project-card transition-opacity duration-300 group-hover:opacity-40 hover:!opacity-100">
               <Image
                 className="mb-8 w-400 h-auto"
