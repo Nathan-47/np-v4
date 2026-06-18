@@ -50,7 +50,7 @@ export default async function ProjectDetailPage({ params }: PageProps) {
     },
     {
       id: "challenges",
-      label: "What I learnt",
+      label: "Challenges",
     },
     {
       id: "improvements",
