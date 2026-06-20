@@ -64,6 +64,8 @@ export default async function ProjectDetailPage({ params }: PageProps) {
 
   return (
     <main className="mx-auto flex max-w-7xl flex-col gap-12 px-6 lg:flex-row">
+      
+      <p className="block lg:hidden -mb-8 underline">On this page</p>
       <ProjectSidebar sections={sections} />
 
       <article className="min-w-0 flex-1 space-y-10">
