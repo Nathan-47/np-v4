@@ -11,6 +11,7 @@ export const metadata: Metadata = {
 };
 
 export default function blog() {
+
   return (
     <div className="flex flex-col flex-1 items-center justify-center">
       <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between mb-14 py-0 px-6 sm:py-1 sm:px-16 sm:items-start">

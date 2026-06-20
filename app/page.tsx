@@ -1,4 +1,4 @@
-"use client";
+// "use client";
 
 import { FaGithub } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa";
@@ -6,6 +6,7 @@ import { IoIosMail } from "react-icons/io";
 import { TbFileCv } from "react-icons/tb";
 
 export default function Home() {
+
   return (
     <div className="flex flex-col flex-1 items-center justify-center">
       <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-0 px-6 sm:py-1 sm:px-16 sm:items-start">
@@ -16,7 +17,7 @@ export default function Home() {
           </h1>
 
           <p className="mt-6 leading-8 text-gray-300">
-            Currently a Web Developer @ 
+            Currently a Web Developer @
             <a
               className="bg-white text-black ml-2 font-bold p-1 rounded-sm hover:bg-[#1d1d1d] hover:text-white hover:outline hover:outline-2 hover:outline-white hover:outline-offset-2 focus:outline-none focus:ring-3
              focus:ring-[#f9c908]"
