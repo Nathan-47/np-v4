@@ -12,7 +12,7 @@ export default function Navbar() {
         <div className="flex h-26 items-center justify-between">
           {/* Logo */}
           <Link href="/">
-            <img src="/np_logo.png" alt="NP logo" width={30} height={20} />
+            <img className="ml-6" src="/np_logo.png" alt="NP logo" width={30} height={30} />
           </Link>
 
           {/* Desktop Menu */}
@@ -87,7 +87,7 @@ export default function Navbar() {
         <div className="md:hidden bg-[#1d1d1d]">
           <div className="flex flex-col space-y-6 px-4 py-1 mb-6 text-xl">
             <Link
-              href="#about"
+              href="/blog"
               onClick={() => setOpen(false)}
               className="relative
               after:absolute
@@ -100,11 +100,11 @@ export default function Navbar() {
               after:duration-300
               hover:after:w-full"
             >
-              About
+              Blog
             </Link>
 
             <Link
-              href="#projects"
+              href="/projects"
               onClick={() => setOpen(false)}
               className="relative
               after:absolute
