@@ -1,5 +1,5 @@
 // "use client";
-
+import Link from 'next/link';
 import { FaGithub } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
@@ -18,14 +18,14 @@ export default function Home() {
 
           <p className="mt-6 leading-8 text-gray-300">
             Currently a Web Developer @
-            <a
+            <Link
               className="bg-white text-black ml-2 font-bold p-1 rounded-sm hover:bg-[#1d1d1d] hover:text-white hover:outline hover:outline-2 hover:outline-white hover:outline-offset-2 focus:outline-none focus:ring-3
              focus:ring-[#f9c908]"
               href="https://www.bcusu.com/"
               target="_blank"
             >
               BCUSU
-            </a>
+            </Link>
           </p>
 
           {/* about section */}
@@ -60,7 +60,7 @@ export default function Home() {
             </div>
           </div>
 
-          <a
+          <Link
             href=""
             target="_blank"
             rel="noopener noreferrer"
@@ -70,21 +70,21 @@ export default function Home() {
           >
             <TbFileCv aria-hidden="true" focusable="false" />
             View Resume
-          </a>
+          </Link>
 
           {/* contact section */}
           <h2 className="uppercase mt-12">Contact</h2>
           <div className="grid sm:grid-cols-3 gap-4">
-            <a
+            <Link
               href="mailto:nathan.parchment47@gmail.com"
               className="flex items-center justify-center gap-2 rounded-md border-1 border-white p-2 w-full sm: 1/2 hover:bg-white hover:text-black cursor-pointer duration-250 focus:outline-none focus:ring-3
              focus:ring-[#f9c908]"
             >
               <IoIosMail aria-hidden="true" focusable="false" />
               Email
-            </a>
+            </Link>
 
-            <a
+            <Link
               href="https://github.com/Nathan-47"
               target="_blank"
               rel="noopener noreferrer"
@@ -93,9 +93,9 @@ export default function Home() {
              focus:ring-[#f9c908]"
             >
               <FaGithub aria-hidden="true" focusable="false" /> Github
-            </a>
+            </Link>
 
-            <a
+            <Link
               href="https://www.linkedin.com/in/nathanparchment/"
               target="_blank"
               rel="noopener noreferrer"
@@ -105,7 +105,7 @@ export default function Home() {
             >
               <FaLinkedin aria-hidden="true" focusable="false" />
               LinkedIn
-            </a>
+            </Link>
           </div>
         </div>
       </main>
