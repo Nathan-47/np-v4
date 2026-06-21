@@ -26,19 +26,6 @@ export default function blog() {
               <p className="text-xl text-white">30/12/2025</p>
             </Link>
           </li>
-
-          <li>
-            <a
-              className="flex w-full items-center justify-between py-2 mb-4 mt-4 transition-opacity duration-300 group-hover:opacity-40 hover:!opacity-100"
-              href=""
-            >
-              <p className="text-xl font-semibold text-white">
-                Marketing Conference
-              </p>
-
-              <p className="text-xl text-white">30/12/2025</p>
-            </a>
-          </li>
         </ul>
       </main>
     </div>
