@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import fitHero from "../images/fitrquest/fitrquest_thumbnail.png";
-import quizHero from "../images/rolequiz/role_thumbnail.png";
-import socHero from "../images/socquiz/soc_thumbnail.png";
-import marvHero from "../images/marvel/marvelapi_thumbnail.png";
+import fitHero from "@/public/images/fitrquest/fitrquest_thumbnail.png";
+import quizHero from "@/public/images/rolequiz/role_thumbnail.png";
+import socHero from "@/public/images/socquiz/soc_thumbnail.png";
+import marvHero from "@/public/images/marvel/marvelapi_thumbnail.png";
 
 export const metadata: Metadata = {
   title: "Nathan Parchment | Projects",
