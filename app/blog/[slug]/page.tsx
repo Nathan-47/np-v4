@@ -53,7 +53,7 @@ export default async function BlogDetailPage({ params }: PageProps) {
           <Image
             className="m-auto mb-10"
             src={blog.image1}
-            alt="power automate workflow"
+            alt={blog.alt}
             width={500}
             height={500}
           />
