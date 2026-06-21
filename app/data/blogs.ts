@@ -1,4 +1,4 @@
-import paImg from '../images/blogs/automate_screenshot.png'
+import paImg from '@/public/images/blogs/automate_screenshot.png'
 
 export const blogs = {
     powerautomate: {
