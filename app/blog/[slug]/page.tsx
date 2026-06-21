@@ -46,17 +46,18 @@ export default async function BlogDetailPage({ params }: PageProps) {
   return (
     <div className="flex flex-col flex-1 items-center justify-center">
       <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between mb-14 py-0 px-6 sm:py-1 sm:px-16 sm:items-start">
-        <section>
+        <section className="min-w-0 flex-1 space-y-6">
           <h1>{blog.title}</h1>
           <p className="mt-5 max-w-prose">{blog.description}</p>
-          <p>{blog.content1}</p>
+          <p className="whitespace-pre-line">{blog.content1}</p>
           <Image
-            className="w-full h-auto"
+            className="m-auto mb-10"
             src={blog.image1}
             alt="power automate workflow"
             width={500}
-            height={100}
+            height={500}
           />
+          <p className="whitespace-pre-line">{blog.content2}</p>
         </section>
       </main>
     </div>
