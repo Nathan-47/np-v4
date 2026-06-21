@@ -32,6 +32,4 @@ describe('Projects Page', () => {
       expect(image.getAttribute('alt')).not.toBe('')
     })
   })
-
-
 })
