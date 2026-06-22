@@ -44,9 +44,7 @@ export default function Home() {
               <p>Web Developer | BCUSU</p>
               <br />
               <p className="mb-4">
-                Working with Graphics/UI Designer to Develop and design more
-                accessible, informative and smoother navigation to students at
-                Birmingham City University.
+              My role is to work with our Graphics Designer to develop and design more accessible, informative content while delivering a smoother user experience to students at Birmingham City University.
               </p>
               <span className="rounded-full bg-gray-300 text-gray-900 m-auto mr-2 pr-4 pl-4 p-1 text-xs font-bold">
                 JavaScript
@@ -61,7 +59,7 @@ export default function Home() {
           </div>
 
           <Link
-            href=""
+            href="/nathan_parchment_CV.pdf"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="View Nathan's resume (opens in new tab)"
