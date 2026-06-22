@@ -65,7 +65,7 @@ export const projects = {
     ],
     gitLink: "https://github.com/Nathan-47/Societyquiz",
     improvements: [
-      "Once the user has completed their quiz and is given their suited societies category such as Sport, general insert etc, the tool could then calculate the users answers and give the percentage of how likely it matches to the users personality.",
+      "Once the user has completed their quiz and is given their suited societies category such as Sport, general interest etc, the tool could then calculate the users answers and give the percentage of how likely it matches to the users personality.",
     ],
     image1: socImg1,
     image2: socImg2,
