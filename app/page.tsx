@@ -31,7 +31,7 @@ export default function Home() {
           {/* about section */}
           <p className="mb-8">
             Hi ✋🏾 I'm a Web Developer currently working at BCUSU, An amazing
-            independent charity, that gives students' their best experience at
+            organisation that gives students' their best experience at
             University. My main focus is to build and design accessible, smooth
             and slick student digital experiences.
           </p>
