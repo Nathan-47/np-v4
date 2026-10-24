@@ -54,7 +54,7 @@ export default function Navbar() {
           <button
             aria-label="Toggle menu"
             onClick={() => setOpen(!open)}
-            className="md:hidden focus:outline-none"
+            className="md:hidden focus:outline-none relative z-[60]"
           >
             <svg
               className="w-6 h-6"
@@ -84,8 +84,8 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {open && (
-        <div className="md:hidden bg-[#1d1d1d]">
-          <div className="flex flex-col space-y-6 px-4 py-1 mb-6 text-xl">
+        <div className="md:hidden fixed inset-0 z-50 bg-[#1d1d1d] pt-20">
+          <div className="flex flex-col space-y-15 px-4 text-4xl text-center mt-10">
             <Link
               href="/blog"
               onClick={() => setOpen(false)}
