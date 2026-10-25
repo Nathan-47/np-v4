@@ -15,7 +15,7 @@ export default function Navbar() {
             <img className="ml-6" src="/np_logo.png" alt="NP logo" width={30} height={30} />
           </Link>
 
-          {/* Desktop Menu */}
+          {/* Desktop Menu*/}
           <div className="hidden md:flex items-center space-x-10">
             <Link
               href="/blog"
