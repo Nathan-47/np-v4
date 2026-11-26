@@ -1,65 +1,38 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
-import Image from "next/image";
-import { blogs } from "@/app/data/blogs";
+import { MDXRemote } from "next-mdx-remote/rsc";
+import { getBlog, getBlogSlugs } from "@/app/lib/blogs";
 
-type PageProps = {
-  params: Promise<{
-    slug: string;
-  }>;
-};
+type PageProps = { params: Promise<{ slug: string }> };
 
-// dynamic metadata for each blog
+export function generateStaticParams() {
+  return getBlogSlugs().map((slug) => ({ slug }));
+}
+
 export async function generateMetadata({
   params,
 }: PageProps): Promise<Metadata> {
   const { slug } = await params;
-
-  const blog = blogs[slug as keyof typeof blogs];
-
-  if (!blogs) {
-    return {
-      title: "Blog Not Found",
-    };
-  }
-
+  const blog = getBlog(slug);
+  if (!blog) return { title: "Blog Not Found" };
   return {
-    title: `Nathan Parchment | ${blog.title}`,
-    description: blog.description,
-    icons: {
-      icon: "/np_logo.png",
-    },
+    title: `Nathan Parchment | ${blog.meta.title}`,
+    description: blog.meta.description,
   };
 }
-// dynamic metadata for each blog
 
 export default async function BlogDetailPage({ params }: PageProps) {
   const { slug } = await params;
-
-  // make sure slug string can be found in blogs object
-  const blog = blogs[slug as keyof typeof blogs];
-
-  if (!blogs) {
-    notFound();
-  }
+  const blog = getBlog(slug);
+  if (!blog) notFound();
 
   return (
-    <div className="flex flex-col flex-1 items-center justify-center">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between mb-14 py-0 px-6 sm:py-1 sm:px-16 sm:items-start">
-        <section className="min-w-0 flex-1 space-y-6">
-          <h1>{blog.title}</h1>
-          <p className="mt-5 max-w-prose">{blog.description}</p>
-          <p className="whitespace-pre-line">{blog.content1}</p>
-          <Image
-            className="m-auto mb-10"
-            src={blog.image1}
-            alt={blog.alt}
-            width={500}
-            height={500}
-          />
-          <p className="whitespace-pre-line">{blog.content2}</p>
-        </section>
-      </main>
-    </div>
+    <main className="w-full max-w-3xl mx-auto mb-14 px-6 sm:px-16">
+      <article className="prose prose-invert max-w-none">
+        <h1>{blog.meta.title}</h1>
+        <p>{blog.meta.description}</p>
+        <MDXRemote source={blog.content} />
+      </article>
+    </main>
   );
 }
