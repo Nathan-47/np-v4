@@ -1,33 +1,28 @@
-import type { Metadata } from "next";
 import Link from "next/link";
+import { getBlog, getBlogSlugs } from "@/app/lib/blogs";
 
-export const metadata: Metadata = {
-  title: "Nathan Parchment | Blog",
-  description:
-    "My coding blog covering all that I do within my job, side projects and daily life.",
-  icons: {
-    icon: "/np_logo.png",
-  },
-};
-
-export default function blog() {
+export default function BlogsPage() {
+  const posts = getBlogSlugs()
+    .map((slug) => ({ slug, ...getBlog(slug)!.meta }))
+    .sort((a, b) => (a.date < b.date ? 1 : -1));
 
   return (
-    <div className="flex flex-col flex-1 items-center justify-center">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between mb-14 py-0 px-6 sm:py-1 sm:px-16 sm:items-start">
-        <ul role="list" className="mt-12 divide-y divide-white/5 w-full group">
-          <li>
-            <Link
-              className="flex w-full items-center justify-between py-2 mb-4 mt-4 transition-opacity duration-300 group-hover:opacity-40 hover:!opacity-100"
-              href="/blog/powerautomate"
-            >
-              <p className="text-xl font-semibold text-white">Power Automate</p>
+    <main className="w-full max-w-3xl mx-auto mb-14 px-6 sm:px-16 space-y-8">
+      <h1>Writings</h1>
+      <p className="-mt-6 italic">Random thoughts and blogs</p>
 
-              <p className="text-xl text-white">30/12/2025</p>
-            </Link>
-          </li>
-        </ul>
-      </main>
-    </div>
+      <div className="group/list space-y-8">
+        {posts.map((post) => (
+          <Link
+            key={post.slug}
+            href={`/blog/${post.slug}`}
+            className="block transition-opacity duration-300 group-hover/list:opacity-40 hover:opacity-100!"
+          >
+            <h2>{post.title}</h2>
+            <p>{post.description}</p>
+          </Link>
+        ))}
+      </div>
+    </main>
   );
 }
