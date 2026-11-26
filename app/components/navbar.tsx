@@ -100,7 +100,7 @@ export default function Navbar() {
               after:duration-300
               hover:after:w-full"
             >
-              Blog
+              Writings
             </Link>
 
             <Link
